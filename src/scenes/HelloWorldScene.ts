@@ -1,35 +1,89 @@
 import Phaser from "phaser";
 
+import Drol, { PlayerState } from "../game/drol";
+import { TextureKeys } from "../consts";
+
 export default class HelloWorldScene extends Phaser.Scene {
+  cursors!: Phaser.Types.Input.Keyboard.CursorKeys;
+  fire!: Phaser.Input.Keyboard.Key;
+  player!: Drol;
+
   constructor() {
     super("hello-world");
   }
 
   preload() {
-    this.load.setBaseURL("http://labs.phaser.io");
+    this.load.image("background", "backgrounds/stars.gif");
 
-    this.load.image("sky", "assets/skies/space3.png");
-    this.load.image("logo", "assets/sprites/phaser3-logo.png");
-    this.load.image("red", "assets/particles/red.png");
+    this.load.atlas(TextureKeys.Drol, "sprites/drol.png", "sprites/drol.json");
+
+    this.cursors = this.input.keyboard.createCursorKeys();
+
+    this.fire = this.input.keyboard.addKey(
+      Phaser.Input.Keyboard.KeyCodes.SPACE
+    );
   }
 
   create() {
-    this.add.image(400, 300, "sky");
+    const width = this.scale.width;
+    const height = this.scale.height;
 
-    const particles = this.add.particles("red");
+    const background = this.add
+      .tileSprite(0, 0, width, height, "background")
+      .setOrigin(0)
+      .setScrollFactor(0, 0);
 
-    const emitter = particles.createEmitter({
-      speed: 100,
-      scale: { start: 1, end: 0 },
-      blendMode: "ADD",
-    });
+    this.player = new Drol(this, 200, 200);
+    this.add.existing(this.player);
 
-    const logo = this.physics.add.image(400, 100, "logo");
+    const body = this.player.body as Phaser.Physics.Arcade.Body;
 
-    logo.setVelocity(100, 200);
-    logo.setBounce(1, 1);
-    logo.setCollideWorldBounds(true);
+    body.setCollideWorldBounds(true);
 
-    emitter.startFollow(logo);
+    const FKey = this.input.keyboard.addKey("F");
+
+    FKey.on(
+      "down",
+      () => {
+        if (this.scale.isFullscreen) {
+          this.scale.stopFullscreen();
+        } else {
+          this.scale.startFullscreen();
+        }
+      },
+      this
+    );
+
+    // body.setVelocity(200, 100);
+
+    body.setBounce(1, 1);
+    body.setCollideWorldBounds(true);
+
+    // this.cameras.main.startFollow(this.player);
+    //
+  }
+
+  update(time: number, delta: number) {
+    const horizontalSpeed = 200;
+    super.update(time, delta);
+    const body = this.player.body as Phaser.Physics.Arcade.Body;
+
+    if (this.cursors.right.isDown) {
+      if (this.player.playerState == PlayerState.FacingRight) {
+        //
+      }
+    } else if (this.cursors.left.isDown) {
+      body.setVelocityX(horizontalSpeed * -1);
+    }
+
+    if (this.cursors.up.isDown) {
+      body.setVelocityY(-100);
+    } else if (this.cursors.down.isDown) {
+      body.setVelocityY(100);
+    }
+
+    if (this.fire.isDown) {
+      body.setVelocity(0, 0);
+    }
   }
 }

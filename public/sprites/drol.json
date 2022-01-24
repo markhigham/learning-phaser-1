@@ -1,0 +1,251 @@
+{
+	"textures": [
+		{
+			"image": "drol.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 244,
+				"h": 23
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "drol-walk-right-02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 23,
+						"h": 21
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 23,
+						"h": 21
+					}
+				},
+				{
+					"filename": "drol-walk-left-02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 22,
+						"h": 21
+					},
+					"frame": {
+						"x": 26,
+						"y": 1,
+						"w": 22,
+						"h": 21
+					}
+				},
+				{
+					"filename": "drol-walk-right-01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 20,
+						"h": 21
+					},
+					"frame": {
+						"x": 50,
+						"y": 1,
+						"w": 20,
+						"h": 21
+					}
+				},
+				{
+					"filename": "drol-walk-left-01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 0,
+						"w": 19,
+						"h": 21
+					},
+					"frame": {
+						"x": 72,
+						"y": 1,
+						"w": 19,
+						"h": 21
+					}
+				},
+				{
+					"filename": "drol-front.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 21,
+						"h": 20
+					},
+					"frame": {
+						"x": 93,
+						"y": 1,
+						"w": 21,
+						"h": 20
+					}
+				},
+				{
+					"filename": "drol-rotate-left-02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 2,
+						"w": 20,
+						"h": 20
+					},
+					"frame": {
+						"x": 116,
+						"y": 1,
+						"w": 20,
+						"h": 20
+					}
+				},
+				{
+					"filename": "drol-rotate-right-02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 20,
+						"h": 20
+					},
+					"frame": {
+						"x": 138,
+						"y": 1,
+						"w": 20,
+						"h": 20
+					}
+				},
+				{
+					"filename": "drol-rotate-right-03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 20,
+						"h": 20
+					},
+					"frame": {
+						"x": 160,
+						"y": 1,
+						"w": 20,
+						"h": 20
+					}
+				},
+				{
+					"filename": "drol-rotate-left-01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 2,
+						"w": 19,
+						"h": 20
+					},
+					"frame": {
+						"x": 182,
+						"y": 1,
+						"w": 19,
+						"h": 20
+					}
+				},
+				{
+					"filename": "drol-rotate-left-03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 2,
+						"w": 19,
+						"h": 20
+					},
+					"frame": {
+						"x": 203,
+						"y": 1,
+						"w": 19,
+						"h": 20
+					}
+				},
+				{
+					"filename": "drol-rotate-right-01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 2,
+						"w": 19,
+						"h": 20
+					},
+					"frame": {
+						"x": 224,
+						"y": 1,
+						"w": 19,
+						"h": 20
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:85c93d69b92124c9673bd434677edc45:6c6dcd825da26383ad7f30b270b4d0ae:521b725d2c6e76061409ca17d4c50b55$"
+	}
+}
